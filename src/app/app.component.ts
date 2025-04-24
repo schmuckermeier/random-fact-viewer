@@ -2,12 +2,13 @@ import {Component, inject, signal} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {RandomFactService} from './services/random-fact.service';
-import {FavoriteFactsService} from './services/favorite-facts.service';
 import {RandomFact} from './services/random-fact';
+import {FavoriteFactsListComponent} from './components/favorite-facts-list/favorite-facts-list.component';
+import {FavoriteFactsService} from './services/favorite-facts.service';
 
 @Component({
   selector: 'app-root',
-  imports: [MatIconModule, MatButtonModule, MatIconModule, MatIconModule],
+  imports: [MatIconModule, MatButtonModule, FavoriteFactsListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -17,7 +18,6 @@ export class AppComponent {
   private favoriteFactsService = inject(FavoriteFactsService);
 
   currentRandomFact = signal<RandomFact| undefined>(undefined)
-  favoriteFacts = signal<RandomFact[]>(this.favoriteFactsService.getFacts());
 
   constructor() {
     this.randomFactService.getRandomFact().subscribe(randomFact => {this.currentRandomFact.set(randomFact)})
@@ -27,13 +27,7 @@ export class AppComponent {
     this.randomFactService.getRandomFact().subscribe(randomFact => {this.currentRandomFact.set(randomFact)})
   }
 
-  saveAsFavorite() {
-    const fact = this.currentRandomFact();
+  saveAsFavorite(fact: RandomFact| undefined) {
     fact && this.favoriteFactsService.saveFact(fact)
-  }
-
-  removeFromFavorites(fact: RandomFact) {
-    const updatedFacts = this.favoriteFactsService.removeFact(fact);
-    this.favoriteFacts.set(updatedFacts);
   }
 }

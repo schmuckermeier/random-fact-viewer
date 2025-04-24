@@ -1,0 +1,8 @@
+@for (fact of favoriteFacts(); track fact.id) {
+  <div>
+    <span>{{ fact.text }}</span>
+    <button mat-mini-fab (click)="removeFromFavorites(fact)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+}

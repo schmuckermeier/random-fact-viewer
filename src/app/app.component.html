@@ -6,18 +6,11 @@
         <mat-icon>refresh</mat-icon>
         Load a random fact
       </button>
-      <button extended mat-fab (click)="saveAsFavorite()">
+      <button extended mat-fab (click)="saveAsFavorite(currentRandomFact())" [disabled]="!currentRandomFact()">
         <mat-icon>favorite</mat-icon>
         Save as favorite
       </button>
     </div>
-    @for (fact of favoriteFacts(); track fact.id) {
-      <div>
-        <span>{{ fact.text }}</span>
-        <button mat-mini-fab (click)="removeFromFavorites(fact)">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </div>
-    }
+    <app-favorite-facts-list></app-favorite-facts-list>
   </section>
 </main>
