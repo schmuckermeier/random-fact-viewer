@@ -1,0 +1,9 @@
+.content {
+  margin: 5rem;
+}
+
+.button-list {
+  button {
+    margin-right: 2rem;
+  }
+}
