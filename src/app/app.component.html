@@ -1,15 +1,23 @@
 <main>
   <section class="content">
-    <p>{{ currentRandomFact | async}}</p>
+    <p>{{ currentRandomFact()?.text }}</p>
     <div class="button-list">
-      <button mat-fab extended (click)="fetchRandomFact()">
+      <button extended mat-fab (click)="fetchRandomFact()">
         <mat-icon>refresh</mat-icon>
         Load a random fact
       </button>
-      <button mat-fab extended>
+      <button extended mat-fab (click)="saveAsFavorite()">
         <mat-icon>favorite</mat-icon>
         Save as favorite
       </button>
     </div>
+    @for (fact of favoriteFacts(); track fact.id) {
+      <div>
+        <span>{{ fact.text }}</span>
+        <button mat-mini-fab (click)="removeFromFavorites(fact)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    }
   </section>
 </main>

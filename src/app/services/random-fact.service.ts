@@ -1,15 +1,16 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {RandomFact} from './random-fact';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RandomFactService {
 
-  private url = 'https://uselessfacts.jsph.pl/api/v2/facts/random';
+  private readonly http: HttpClient = inject(HttpClient);
 
-  async getRandomFact(): Promise<RandomFact> {
-    const data = await fetch(this.url);
-    return (await data.json()) ?? {};
+  getRandomFact(): Observable<RandomFact> {
+    return this.http.get<RandomFact>('https://uselessfacts.jsph.pl/api/v2/facts/random');
   }
 }
