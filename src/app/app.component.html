@@ -1,6 +1,14 @@
 <main>
   <section class="content">
+
     <app-fact-viewer></app-fact-viewer>
-    <app-favorite-facts-list></app-favorite-facts-list>
+
+    <div>
+      <app-search-input (selectedFact)="onFactSelected($event)"></app-search-input>
+    </div>
+
+    <div>
+      <app-favorite-facts-list></app-favorite-facts-list>
+    </div>
   </section>
 </main>

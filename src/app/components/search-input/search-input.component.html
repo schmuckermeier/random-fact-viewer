@@ -1,0 +1,16 @@
+<form>
+  <label>Search in favorites:
+    <mat-form-field>
+      <input [formControl]="myControl"
+             [matAutocomplete]="auto"
+             matInput
+             placeholder="Start typing..."
+             type="text">
+      <mat-autocomplete #auto="matAutocomplete">
+        @for (fact of filteredOptions | async; track fact.id) {
+          <mat-option [value]="fact" (onSelectionChange)="onOptionSelected(fact)">{{ fact.text }}</mat-option>
+        }
+      </mat-autocomplete>
+    </mat-form-field>
+  </label>
+</form>
