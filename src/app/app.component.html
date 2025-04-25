@@ -1,18 +1,6 @@
 <main>
   <section class="content">
-    <mat-card appearance="outlined">
-      <mat-card-content>{{ currentRandomFact()?.text }}</mat-card-content>
-    </mat-card>
-    <div class="button-list">
-      <button extended mat-fab (click)="fetchRandomFact()">
-        <mat-icon>refresh</mat-icon>
-        Load a random fact
-      </button>
-      <button extended mat-fab (click)="saveAsFavorite(currentRandomFact())" [disabled]="!currentRandomFact()">
-        <mat-icon>favorite</mat-icon>
-        Save as favorite
-      </button>
-    </div>
+    <app-fact-viewer></app-fact-viewer>
     <app-favorite-facts-list></app-favorite-facts-list>
   </section>
 </main>

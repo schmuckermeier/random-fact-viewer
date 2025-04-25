@@ -1,14 +1,4 @@
 .content {
-  margin: 5rem;
+  margin: 3rem;
 }
 
-.button-list {
-  button {
-    margin-right: 2rem;
-    margin-top: 1rem;
-  }
-
-  @media (max-width: var(--mobile-breakpoint)) {
-    text-align: center;
-  }
-}
