@@ -1,8 +1,24 @@
-@for (fact of favoriteFacts(); track fact.id) {
-  <div>
-    <span>{{ fact.text }}</span>
-    <button mat-mini-fab (click)="removeFromFavorites(fact)">
-      <mat-icon>delete</mat-icon>
-    </button>
-  </div>
-}
+<table [dataSource]="favoriteFacts$" class="mat-elevation-z8" mat-table>
+
+  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+
+  <ng-container matColumnDef="name">
+    <th *matHeaderCellDef mat-header-cell>Random Fact</th>
+    <td *matCellDef="let randomFact" mat-cell> {{ randomFact.text }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="source">
+    <th *matHeaderCellDef mat-header-cell>Fact Source</th>
+    <td *matCellDef="let randomFact" mat-cell> {{ randomFact.source }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <th *matHeaderCellDef mat-header-cell></th>
+    <td *matCellDef="let randomFact" mat-cell>
+      <button (click)="removeFromFavorites(randomFact)" mat-mini-fab>
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+</table>
