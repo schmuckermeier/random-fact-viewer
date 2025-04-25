@@ -6,10 +6,11 @@ import {RandomFact} from './services/random-fact';
 import {FavoriteFactsListComponent} from './components/favorite-facts-list/favorite-facts-list.component';
 import {FavoriteFactsService} from './services/favorite-facts.service';
 import {take} from 'rxjs';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-root',
-  imports: [MatIconModule, MatButtonModule, FavoriteFactsListComponent],
+  imports: [MatIconModule, MatButtonModule, FavoriteFactsListComponent, MatCardModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

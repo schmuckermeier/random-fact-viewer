@@ -1,6 +1,8 @@
 <main>
   <section class="content">
-    <p>{{ currentRandomFact()?.text }}</p>
+    <mat-card appearance="outlined">
+      <mat-card-content>{{ currentRandomFact()?.text }}</mat-card-content>
+    </mat-card>
     <div class="button-list">
       <button extended mat-fab (click)="fetchRandomFact()">
         <mat-icon>refresh</mat-icon>
