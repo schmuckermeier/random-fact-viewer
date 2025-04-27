@@ -15,7 +15,7 @@ import {RandomFact} from '../../services/random-fact';
   styleUrl: './search-input.component.css'
 })
 export class SearchInputComponent {
-  myControl = new FormControl('');
+  formControl = new FormControl('');
   filteredOptions: Observable<RandomFact[]>;
 
   private favoriteFactsService = inject(FavoriteFactsService);
@@ -27,7 +27,7 @@ export class SearchInputComponent {
 
     this.filteredOptions = combineLatest([
       allFavoriteFacts,
-      this.myControl.valueChanges.pipe(startWith('')),
+      this.formControl.valueChanges.pipe(startWith('')),
     ]).pipe(
       map(([allFacts, searchValue]) =>
         allFacts.filter(fact => {

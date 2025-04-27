@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, inject, Input, signal} from '@angular/core';
 import {RandomFact} from '../../services/random-fact';
 import {RandomFactService} from '../../services/random-fact.service';
 import {FavoriteFactsService} from '../../services/favorite-facts.service';
@@ -31,5 +31,10 @@ export class FactViewerComponent {
 
   saveAsFavorite(fact: RandomFact | undefined) {
     fact && this.favoriteFactsService.saveFact(fact)
+  }
+
+  @Input()
+  set selectedFact (selectedFact: RandomFact | undefined) {
+    selectedFact && this.currentRandomFact.set(selectedFact);
   }
 }
