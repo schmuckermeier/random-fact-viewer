@@ -6,7 +6,7 @@
              matInput
              placeholder="Start typing..."
              type="text">
-      <mat-autocomplete #auto="matAutocomplete">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFactText">
         @for (fact of filteredOptions | async; track fact.id) {
           <mat-option [value]="fact" (onSelectionChange)="onOptionSelected(fact)">{{ fact.text }}</mat-option>
         }

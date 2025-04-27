@@ -30,15 +30,22 @@ export class SearchInputComponent {
       this.myControl.valueChanges.pipe(startWith('')),
     ]).pipe(
       map(([allFacts, searchValue]) =>
-        allFacts.filter(fact =>
-          fact.text.toLowerCase().includes(searchValue ? searchValue.toLowerCase(): '' )
+        allFacts.filter(fact => {
+            if(typeof searchValue !== 'string') {
+              return []
+            }
+            return fact.text.toLowerCase().includes(searchValue ? searchValue.toLowerCase() : '')
+          }
         )
       )
     );
   }
 
   onOptionSelected(fact: RandomFact) {
-    this.myControl.reset();
     this.selectedFact.emit(fact);
+  }
+
+  displayFactText(fact: RandomFact): string {
+    return fact.text;
   }
 }
