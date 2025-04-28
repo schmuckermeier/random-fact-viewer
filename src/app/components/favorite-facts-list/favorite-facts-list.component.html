@@ -16,7 +16,7 @@
   <ng-container matColumnDef="delete">
     <th *matHeaderCellDef mat-header-cell></th>
     <td *matCellDef="let randomFact" mat-cell>
-      <button (click)="removeFromFavorites(randomFact)" mat-mini-fab>
+      <button (click)="removeFromFavorites(randomFact)" mat-mini-fab id="{{ 'delete-' + randomFact.id }}">
         <mat-icon>delete</mat-icon>
       </button>
     </td>

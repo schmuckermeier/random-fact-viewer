@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FactViewerComponent should render with initial fact and buttons 1`] = `
+<app-fact-viewer
+  currentRandomFact={[Function Function]}
+  favoriteFactsService={[Function Object]}
+  randomFactService={[Function Object]}
+>
+  <mat-card
+    appearance="outlined"
+    class="mat-mdc-card mdc-card mat-mdc-card-outlined mdc-card--outlined"
+  >
+    <mat-card-content
+      class="mat-mdc-card-content"
+      id="viewerContent"
+    >
+      Golf courses cover 4% of North America.
+    </mat-card-content>
+  </mat-card><div
+    class="button-list"
+  >
+    <button
+      class="mdc-fab mat-mdc-fab-base mat-mdc-fab mat-accent mat-mdc-button-base mdc-fab--extended mat-mdc-extended-fab"
+      extended=""
+      id="loadFact"
+      mat-fab=""
+      mat-ripple-loader-class-name="mat-mdc-button-ripple"
+      mat-ripple-loader-uninitialized=""
+    >
+      <span
+        class="mat-mdc-button-persistent-ripple mdc-fab__ripple"
+      />
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        refresh
+      </mat-icon>
+      <span
+        class="mdc-button__label"
+      >
+         Load a random fact 
+      </span>
+      <span
+        class="mat-focus-indicator"
+      />
+      <span
+        class="mat-mdc-button-touch-target"
+      />
+    </button>
+    <button
+      class="mdc-fab mat-mdc-fab-base mat-mdc-fab mat-accent mat-mdc-button-base mdc-fab--extended mat-mdc-extended-fab"
+      extended=""
+      id="saveFact"
+      mat-fab=""
+      mat-ripple-loader-class-name="mat-mdc-button-ripple"
+      mat-ripple-loader-uninitialized=""
+    >
+      <span
+        class="mat-mdc-button-persistent-ripple mdc-fab__ripple"
+      />
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        favorite
+      </mat-icon>
+      <span
+        class="mdc-button__label"
+      >
+         Save as favorite 
+      </span>
+      <span
+        class="mat-focus-indicator"
+      />
+      <span
+        class="mat-mdc-button-touch-target"
+      />
+    </button>
+  </div>
+</app-fact-viewer>
+`;

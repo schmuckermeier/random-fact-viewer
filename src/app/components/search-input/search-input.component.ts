@@ -11,8 +11,7 @@ import {RandomFact} from '../../services/random-fact';
 @Component({
   selector: 'app-search-input',
   imports: [MatFormFieldModule, MatAutocompleteModule, MatInputModule, AsyncPipe, ReactiveFormsModule],
-  templateUrl: './search-input.component.html',
-  styleUrl: './search-input.component.css'
+  templateUrl: './search-input.component.html'
 })
 export class SearchInputComponent {
   formControl = new FormControl('');
