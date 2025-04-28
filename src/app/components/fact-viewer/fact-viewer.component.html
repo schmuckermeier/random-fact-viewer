@@ -1,0 +1,13 @@
+<mat-card appearance="outlined">
+  <mat-card-content id="viewerContent">{{ currentRandomFact()?.text }}</mat-card-content>
+</mat-card>
+<div class="button-list">
+  <button extended mat-fab (click)="fetchRandomFact()" id="loadFact">
+    <mat-icon>refresh</mat-icon>
+    Load a random fact
+  </button>
+  <button extended mat-fab (click)="saveAsFavorite(currentRandomFact())" [disabled]="!currentRandomFact()" id="saveFact">
+    <mat-icon>favorite</mat-icon>
+    Save as favorite
+  </button>
+</div>

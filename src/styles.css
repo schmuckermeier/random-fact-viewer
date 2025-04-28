@@ -1,4 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --mobile-breakpoint: 500px;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 18px;
+
+  @media (max-width: var(--mobile-breakpoint)) {
+    font-size: 14px;
+  }
+}

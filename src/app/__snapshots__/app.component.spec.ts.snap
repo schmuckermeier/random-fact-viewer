@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should render with initial state 1`] = `
+<app-root
+  selectedFact={[Function Function]}
+>
+  <main>
+    <section
+      class="content"
+    >
+      <app-fact-viewer>
+        <mat-card
+          appearance="outlined"
+          class="mat-mdc-card mdc-card mat-mdc-card-outlined mdc-card--outlined"
+        >
+          <mat-card-content
+            class="mat-mdc-card-content"
+            id="viewerContent"
+          >
+            Golf courses cover 4% of North America.
+          </mat-card-content>
+        </mat-card>
+        <div
+          class="button-list"
+        >
+          <button
+            class="mdc-fab mat-mdc-fab-base mat-mdc-fab mat-accent mat-mdc-button-base mdc-fab--extended mat-mdc-extended-fab"
+            extended=""
+            id="loadFact"
+            mat-fab=""
+            mat-ripple-loader-class-name="mat-mdc-button-ripple"
+            mat-ripple-loader-uninitialized=""
+          >
+            <span
+              class="mat-mdc-button-persistent-ripple mdc-fab__ripple"
+            />
+            <mat-icon
+              aria-hidden="true"
+              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+              data-mat-icon-type="font"
+              role="img"
+            >
+              refresh
+            </mat-icon>
+            <span
+              class="mdc-button__label"
+            >
+               Load a random fact 
+            </span>
+            <span
+              class="mat-focus-indicator"
+            />
+            <span
+              class="mat-mdc-button-touch-target"
+            />
+          </button>
+          <button
+            class="mdc-fab mat-mdc-fab-base mat-mdc-fab mat-accent mat-mdc-button-base mdc-fab--extended mat-mdc-extended-fab"
+            extended=""
+            id="saveFact"
+            mat-fab=""
+            mat-ripple-loader-class-name="mat-mdc-button-ripple"
+            mat-ripple-loader-uninitialized=""
+          >
+            <span
+              class="mat-mdc-button-persistent-ripple mdc-fab__ripple"
+            />
+            <mat-icon
+              aria-hidden="true"
+              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+              data-mat-icon-type="font"
+              role="img"
+            >
+              favorite
+            </mat-icon>
+            <span
+              class="mdc-button__label"
+            >
+               Save as favorite 
+            </span>
+            <span
+              class="mat-focus-indicator"
+            />
+            <span
+              class="mat-mdc-button-touch-target"
+            />
+          </button>
+        </div>
+      </app-fact-viewer>
+      <div>
+        <app-search-input>
+          <form
+            novalidate=""
+          >
+            <label>
+              Search in favorites: 
+              <mat-form-field
+                class="mat-mdc-form-field mat-mdc-form-field-type-mat-input mat-form-field-appearance-fill mat-primary ng-untouched ng-pristine ng-valid"
+              >
+                <div
+                  class="mat-mdc-text-field-wrapper mdc-text-field mdc-text-field--filled mdc-text-field--no-label"
+                >
+                  <div
+                    class="mat-mdc-form-field-focus-overlay"
+                  />
+                  <div
+                    class="mat-mdc-form-field-flex"
+                  >
+                    <div
+                      class="mat-mdc-form-field-infix"
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-invalid="false"
+                        aria-required="false"
+                        autocomplete="off"
+                        class="mat-mdc-autocomplete-trigger mat-mdc-input-element mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored"
+                        id="searchInput"
+                        matinput=""
+                        placeholder="Start typing..."
+                        role="combobox"
+                        type="text"
+                      />
+                      <mat-autocomplete
+                        class="mat-mdc-autocomplete"
+                      >
+                      </mat-autocomplete>
+                    </div>
+                  </div>
+                  <div
+                    class="mdc-line-ripple mdc-line-ripple--deactivating"
+                    matformfieldlineripple=""
+                  />
+                </div>
+                <div
+                  class="mat-mdc-form-field-subscript-wrapper mat-mdc-form-field-bottom-align"
+                >
+                  <div
+                    aria-atomic="true"
+                    aria-live="polite"
+                    class="mat-mdc-form-field-hint-wrapper"
+                  >
+                    <div
+                      class="mat-mdc-form-field-hint-spacer"
+                    />
+                  </div>
+                </div>
+              </mat-form-field>
+            </label>
+          </form>
+        </app-search-input>
+      </div>
+      <div>
+        <app-favorite-facts-list>
+          <table
+            class="mat-mdc-table mdc-data-table__table cdk-table mat-elevation-z8"
+            mat-table=""
+            role="table"
+          >
+            <thead
+              role="rowgroup"
+            >
+              <tr
+                class="mat-mdc-header-row mdc-data-table__header-row cdk-header-row"
+                mat-header-row=""
+                role="row"
+              >
+                <th
+                  class="mat-mdc-header-cell mdc-data-table__header-cell cdk-header-cell cdk-column-name mat-column-name"
+                  mat-header-cell=""
+                  role="columnheader"
+                >
+                  Random Fact
+                </th>
+                <th
+                  class="mat-mdc-header-cell mdc-data-table__header-cell cdk-header-cell cdk-column-source mat-column-source"
+                  mat-header-cell=""
+                  role="columnheader"
+                >
+                  Fact Source
+                </th>
+                <th
+                  class="mat-mdc-header-cell mdc-data-table__header-cell cdk-header-cell cdk-column-delete mat-column-delete"
+                  mat-header-cell=""
+                  role="columnheader"
+                />
+              </tr>
+            </thead>
+            <tbody
+              class="mdc-data-table__content"
+              role="rowgroup"
+            >
+            </tbody>
+            <tfoot
+              class="mat-mdc-table-sticky"
+              role="rowgroup"
+              style="display: none; bottom: 0px; z-index: 10;"
+            >
+            </tfoot>
+          </table>
+        </app-favorite-facts-list>
+      </div>
+    </section>
+  </main>
+</app-root>
+`;
