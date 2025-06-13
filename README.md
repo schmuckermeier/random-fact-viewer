@@ -15,7 +15,7 @@ Once the server is running, open your browser and navigate to `http://localhost:
 ## Building
 
 To build the project run:
-
+test
 ```bash
 ng build
 ```
